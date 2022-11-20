@@ -11,7 +11,7 @@ module "my_vpc" {
    }
 
 module "staging_vpc" {
-    source = "git@github.com:bhargavimandala/terraform-aws-vpc-module.git?ref=v1.0"
+    source = "git@github.com:bhargavimandala/terraform-aws-vpc-module.git?ref=v1.1"
     cidr_block = "10.15.0.0/22"
     product = "tesla"
     environment = "staging"
@@ -19,5 +19,6 @@ module "staging_vpc" {
     public_az = "eu-west-2a,eu-west-2b"
     privatesubnet_cidr = "10.15.2.0/24,10.15.3.0/24"
     private_az = "eu-west-2c,eu-west-2a"
+    costcode = "345"
     }
 
