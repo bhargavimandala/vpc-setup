@@ -1,5 +1,5 @@
 module "my_vpc" {
-    source = "git@github.com:bhargavimandala/terraform-aws-vpc-module.git?ref=v1.1"
+    source = "git@github.com:bhargavimandala/terraform-aws-vpc-module.git?ref=v1.2"
     cidr_block = "10.0.0.0/16"
     product = "tesla"
     environment = "dev"
@@ -8,7 +8,8 @@ module "my_vpc" {
     privatesubnet_cidr = "10.0.3.0/28,10.0.4.0/28,10.0.6.0/28"
     private_az = "eu-west-2c,eu-west-2a,eu-west-2b"
     costcode = "123"
-   }
+    terraform_repo = "https://github.com/bhargavimandala/vpc-setup.git"
+    }
 
 module "staging_vpc" {
     source = "git@github.com:bhargavimandala/terraform-aws-vpc-module.git?ref=v1.1"
